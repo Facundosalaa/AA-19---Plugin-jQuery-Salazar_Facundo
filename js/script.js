@@ -269,3 +269,41 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initAnalytics();
 });
+
+function initToasts() {
+  
+  const show = (text) => {
+    if (!window.Toastify) return;
+    Toastify({
+      text,
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      close: true,
+      stopOnFocus: true
+    }).showToast();
+  };
+
+  document.querySelectorAll('.btn-accent, .btn-comprar').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const href = (btn.getAttribute('href') || '').toLowerCase();
+      if (href.includes('comprar')) {
+        show('Vamos a completar tu compra ✅');
+      } else {
+        show('Producto agregado al carrito 🛒');
+      }
+    });
+  });
+
+  const form = document.querySelector('.formulario-compra');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      if (e.defaultPrevented) return; 
+      show('Datos enviados. Te contactaremos 👌');
+    }, true);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initToasts();
+});
