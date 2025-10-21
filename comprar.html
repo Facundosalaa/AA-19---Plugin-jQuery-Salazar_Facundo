@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprar – Synk</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">Synk<span>🔗</span></a>
+      <nav class="nav" id="site-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="listado_tabla.html">Catálogo (Tabla)</a>
+        <a href="listado_box.html">Catálogo (Box)</a>
+        <a href="comprar.html" aria-current="page" class="btn-accent">Comprar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="compra">
+    <h1>🛒 Formulario de Compra</h1>
+
+    <form action="#mensaje" method="get" class="formulario-compra">
+
+      <fieldset>
+        <legend>Datos del Cliente</legend>
+        <div class="grid-2">
+          <label>Nombre completo
+            <input type="text" name="nombre" required>
+          </label>
+          <label>E-mail
+            <input type="email" name="email" required>
+          </label>
+          <label>Teléfono
+            <input type="tel" name="telefono" required>
+          </label>
+          <label>Dirección
+            <input type="text" name="direccion" required>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Método de pago</legend>
+        <select name="pago" required>
+          <option value="">Seleccione...</option>
+          <option value="tarjeta">Tarjeta de crédito/débito</option>
+          <option value="transferencia">Transferencia bancaria</option>
+          <option value="efectivo">Efectivo</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Seleccione productos</legend>
+        <div class="productos-check">
+          <label>
+            <input type="checkbox" name="productos[]" value="iPhone 15 Pro" 
+                   data-precio="1499999" 
+                   data-nombre="iPhone 15 Pro">
+            iPhone 15 Pro - $1.499.999
+          </label>
+          <label>
+            <input type="checkbox" name="productos[]" value="Auriculares Logitech G733" 
+                   data-precio="189999" 
+                   data-nombre="Auriculares Logitech G733">
+            Auriculares Logitech G733 - $189.999
+          </label>
+          <label>
+            <input type="checkbox" name="productos[]" value="Notebook Acer Aspire Vero" 
+                   data-precio="899999" 
+                   data-nombre="Notebook Acer Aspire Vero">
+            Notebook Acer Aspire Vero - $899.999
+          </label>
+          <label>
+            <input type="checkbox" name="productos[]" value="Monitor ViewSonic 27" 
+                   data-precio="399999" 
+                   data-nombre="Monitor ViewSonic 27&quot;">
+            Monitor ViewSonic 27" - $399.999
+          </label>
+          <label>
+            <input type="checkbox" name="productos[]" value="Teclado HyperX Alloy FPS" 
+                   data-precio="129999" 
+                   data-nombre="Teclado HyperX Alloy FPS">
+            Teclado HyperX Alloy FPS - $129.999
+          </label>
+          <label>
+            <input type="checkbox" name="productos[]" value="Mouse Glorious Model O RGB" 
+                   data-precio="69999" 
+                   data-nombre="Mouse Glorious Model O RGB">
+            Mouse Glorious Model O RGB - $69.999
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="resumen-compra">
+        <p>No hay productos seleccionados.</p>
+      </div>
+
+      <div class="form-actions">
+        <button type="reset" class="btn">Limpiar</button>
+        <button type="submit" class="btn-accent">Confirmar compra</button>
+      </div>
+    </form>
+
+    <div id="mensaje" class="modal">
+      <div class="modal-contenido">
+        <h2>¡Gracias por tu compra!</h2>
+        <p>Tu pedido está siendo procesado. Te enviaremos la confirmación al correo indicado.</p>
+        <a href="#" class="btn-accent">Cerrar</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <p>synktechs@gmail.com</p>
+        <p>WhatsApp +54 9 376 428-1622</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>SYNK PICKUP POINT</h3>
+        <p><strong>Misiones:</strong> Lunes a Viernes 9 a 18 hs</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Synk Tech - Argentina</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+<button class="scroll-to-top">↑</button>
+</body>
+</html>

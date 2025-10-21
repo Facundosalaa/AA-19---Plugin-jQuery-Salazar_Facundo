@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Synk Electrónica — Inicio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Synk<span>🔗</span></a>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="html/listado_tabla.html">Catálogo (Tabla)</a>
+      <a href="html/listado_box.html">Catálogo (Box)</a>
+      <a href="html/comprar.html#form-compra" class="btn-accent">Comprar</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Power. Hype. Tech.</h1>
+      <h2>Synk 🔗</h2>
+      <p>Tecnología con estilo, hype y potencia</p>
+      <div class="hero-actions">
+        <a href="#info" class="btn">Explorar</a>
+        <a href="html/listado_box.html" class="btn btn-accent">Ver Catalogo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="info" class="info-section">
+  <div class="container">
+    <h2>¿Por qué elegir Synk?</h2>
+    <p class="intro">
+      En Synk 🔗 creemos que la tecnología no solo debe ser funcional, 
+      sino también un símbolo de estilo y vanguardia. 
+      Nuestra misión es ofrecerte un ecosistema electrónico 
+      que combine potencia, diseño y experiencia premium.
+    </p>
+
+    <div class="info-grid">
+      <article class="info-card">
+        <h3>⚡ Rendimiento</h3>
+        <p>Productos de última generación, desde smartphones hasta notebooks,
+          optimizados para ofrecer la mejor experiencia de usuario.</p>
+      </article>
+
+      <article class="info-card">
+        <h3>🎨 Diseño</h3>
+        <p>Inspirados en la cultura hype/tech, cada dispositivo y accesorio 
+          refleja una estética moderna y minimalista.</p>
+      </article>
+
+      <article class="info-card">
+        <h3>🔒 Seguridad</h3>
+        <p>Navegación confiable y medios de pago seguros, 
+          para que compres con total tranquilidad.</p>
+      </article>
+
+      <article class="info-card">
+        <h3>🌐 Innovación</h3>
+        <p>Actualizamos constantemente nuestro catálogo para que siempre tengas 
+          acceso a lo último en electrónica y gadgets.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <p>synktechs@gmail.com</p>
+      <p>WhatsApp +54 9 376 428-1622</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>SYNK PICKUP POINT</h3>
+      <p><strong>Misiones:</strong> Lunes a Viernes 9 a 18 hs</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>SÉ EL PRIMERO EN ENTERARTE</h3>
+      <p>Suscribite y recibí las mejores promos!</p>
+      <form action="https://formspree.io/f/xqadqpzq" method="POST" class="subscribe-form">
+        <input type="email" name="email" placeholder="Dirección de email..." required>
+        <button type="submit">➤</button>
+      </form>
+      <p id="subs-msg" aria-live="polite"></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Synk Tech - Argentina</p>
+  </div>
+</footer>
+
+<div id="modal-auth" class="modal-auth">
+  <div class="modal-auth-overlay"></div>
+  <div class="modal-auth-content">
+    <button class="modal-auth-close" aria-label="Cerrar">&times;</button>
+
+    <div id="form-login" class="auth-form active">
+      <h2>Iniciar Sesión</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" required placeholder="tu@email.com">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Contraseña</label>
+          <input type="password" id="login-password" name="password" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-accent btn-block">Ingresar</button>
+        <p class="auth-toggle">
+          ¿No tenés cuenta? <a href="#" id="show-register">Registrate acá</a>
+        </p>
+        <p id="login-msg" class="auth-msg" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div id="form-register" class="auth-form">
+      <h2>Crear Cuenta</h2>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="register-name">Nombre completo</label>
+          <input type="text" id="register-name" name="name" required placeholder="Juan Pérez">
+        </div>
+        <div class="form-group">
+          <label for="register-email">Email</label>
+          <input type="email" id="register-email" name="email" required placeholder="tu@email.com">
+        </div>
+        <div class="form-group">
+          <label for="register-password">Contraseña</label>
+          <input type="password" id="register-password" name="password" required minlength="6" placeholder="Mínimo 6 caracteres">
+        </div>
+        <div class="form-group">
+          <label for="register-password2">Confirmar contraseña</label>
+          <input type="password" id="register-password2" name="password2" required minlength="6" placeholder="Repetí tu contraseña">
+        </div>
+        <button type="submit" class="btn btn-accent btn-block">Crear Cuenta</button>
+        <p class="auth-toggle">
+          ¿Ya tenés cuenta? <a href="#" id="show-login">Iniciá sesión</a>
+        </p>
+        <p id="register-msg" class="auth-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="welcome-modal" class="modal" aria-hidden="true">
+  <div class="modal-contenido" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <h2 id="welcome-title">¡Bienvenido a Synk!</h2>
+    <p>Elegí cómo querés continuar:</p>
+
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+      <button id="welcome-login"    class="btn btn-accent">Iniciar sesión</button>
+      <button id="welcome-register" class="btn">Registrarse</button>
+      <button id="welcome-guest"    class="btn">Seguir como invitado</button>
+    </div>
+
+    <label style="display:flex; gap:8px; align-items:center; margin-top:14px; font-size:.9rem;">
+      <input type="checkbox" id="welcome-hide"> No mostrar de nuevo
+    </label>
+
+    <a href="#" id="welcome-close" class="btn-accent" style="margin-top:14px;">Cerrar</a>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/auth-welcome.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){ emailjs.init('Xw3Jl1cYH5Y7Trwu8'); })(); 
+</script>
+<button class="scroll-to-top">↑</button>
+</body>
+</html>
